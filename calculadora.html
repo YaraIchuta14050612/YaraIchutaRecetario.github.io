@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Conversiones</title>
+    <link rel="stylesheet" href="assets/estilos/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo2.png" alt="Bootstrap" width="95" height="45">
+            </a>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="preguntas.html">Preguntas Frecuentes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="nosotros.html">Sobre el Chef</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="calculadora.html">Calculadoras</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="recetas.html">Buscador de Recetas</a>
+                              </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Recetas
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="receta1.html">Tarta de Chocolate</a></li>
+                                  <li><a class="dropdown-item" href="receta2.html">Ensalada Cesar</a></li>
+                                  <li><a class="dropdown-item" href="receta3.html">Pasta Alfredo</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="iniciar.html">Iniciar Sesion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="registro.html">Registro</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+      <h1 class="text-center">Calculadoras de Conversión</h1>
+      <div class="row">
+          <div class="col-md-6 offset-md-3 calculadora activa" id="tempCalculadora">
+              <div class="card mb-4">
+                  <div class="card-body">
+                      <h5 class="card-title">Convertir Temperatura</h5>
+                      <form id="tempConversionForm">
+                          <div class="mb-3">
+                              <label for="tempInput" class="form-label">Temperatura</label>
+                              <input type="number" class="form-control" id="tempInput" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="tempUnitSelect" class="form-label">De</label>
+                              <select class="form-select" id="tempUnitSelect">
+                                  <option value="Celsius">Celsius</option>
+                                  <option value="Fahrenheit">Fahrenheit</option>
+                                  <option value="Kelvin">Kelvin</option>
+                              </select>
+                          </div>
+                          <div class="mb-3">
+                              <label for="tempConvertToSelect" class="form-label">A</label>
+                              <select class="form-select" id="tempConvertToSelect">
+                                  <option value="Celsius">Celsius</option>
+                                  <option value="Fahrenheit">Fahrenheit</option>
+                                  <option value="Kelvin">Kelvin</option>
+                              </select>
+                          </div>
+                          <button type="button" class="btn btn-primary  custom-button" onclick="convertTemperature()">Convertir</button>
+                      <div class="mt-3">
+                          <h5>Resultado: <h5 id="tempResult"></h5></h5>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Conversión de Volumen -->
+          <div class="col-md-6 offset-md-3 calculadora" id="volCalculadora">
+              <div class="card mb-4">
+                  <div class="card-body">
+                      <h5 class="card-title">Convertir Volumen</h5>
+                      <form id="volumeConversionForm">
+                          <div class="mb-3">
+                              <label for="volumeInput" class="form-label">Volumen</label>
+                              <input type="number" class="form-control" id="volumeInput" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="volumeUnitSelect" class="form-label">De</label>
+                              <select class="form-select" id="volumeUnitSelect">
+                                  <option value="Litros">Litros</option>
+                                  <option value="Mililitros">Mililitros</option>
+                                  <option value="Galones">Galones</option>
+                              </select>
+                          </div>
+                          <div class="mb-3">
+                              <label for="volumeConvertToSelect" class="form-label">A</label>
+                              <select class="form-select" id="volumeConvertToSelect">
+                                  <option value="Litros">Litros</option>
+                                  <option value="Mililitros">Mililitros</option>
+                                  <option value="Galones">Galones</option>
+                              </select>
+                          </div>
+                          <button type="button" class="btn btn-primary  custom-button" onclick="convertVolume()">Convertir</button>
+                      </form>
+                      <div class="mt-3">
+                          <h5>Resultado: <h5 id="volumeResult"></h5></h5>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Conversión de Peso -->
+          <div class="col-md-6 offset-md-3 calculadora" id="pesoCalculadora">
+              <div class="card mb-4">
+                  <div class="card-body">
+                      <h5 class="card-title">Convertir Peso</h5>
+                      <form id="weightConversionForm">
+                          <div class="mb-3">
+                              <label for="weightInput" class="form-label">Peso</label>
+                              <input type="number" class="form-control" id="weightInput" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="weightUnitSelect" class="form-label">De</label>
+                              <select class="form-select" id="weightUnitSelect">
+                                  <option value="Kilogramos">Kilogramos</option>
+                                  <option value="Gramos">Gramos</option>
+                                  <option value="Libras">Libras</option>
+                              </select>
+                          </div>
+                          <div class="mb-3">
+                              <label for="weightConvertToSelect" class="form-label">A</label>
+                              <select class="form-select" id="weightConvertToSelect">
+                                  <option value="Kilogramos">Kilogramos</option>
+                                  <option value="Gramos">Gramos</option>
+                                  <option value="Libras">Libras</option>
+                              </select>
+                          </div>
+                          <button type="button" class="btn btn-primary  custom-button" onclick="convertWeight()">Convertir</button>
+                      </form>
+                      <div class="mt-3">
+                        <h5>Resultado: <h5 id="weightResult"></h5></h5>
+                    </div>
+                    
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="assets/img/logo2.png" alt="Logo de SLee Dw">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Estudiante de la carrera de informática, de primer semestre.</p>
+                <p>Estudiante de la materia de Programación Web INF-113</p>
+            </div>
+            <div class="box">
+                <h2>Redes Sociales</h2>
+                <div class="red-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2024 INF-113 Programacion Web I | Ichuta Sinka Yara Belen 14050612</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Java Script/calculadora.js"></script>
+</body>
+</html>

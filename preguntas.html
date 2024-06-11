@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yara Ichuta</title>
+    <link rel="stylesheet" href="assets/estilos/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/logo2.png" alt="Bootstrap" width="95" height="45">
+          </a>
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="preguntas.html">Preguntas Frecuentes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="nosotros.html">Sobre el Chef</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="calculadora.html">Calculadoras</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="recetas.html">Buscador de Recetas</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Recetas
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="receta1.html">Tarta de Chocolate</a></li>
+                      <li><a class="dropdown-item" href="receta2.html">Ensalada Cesar</a></li>
+                      <li><a class="dropdown-item" href="receta3.html">Pasta Alfredo</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="iniciar.html">Iniciar Sesion</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="registro.html">Registro</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </nav>
+      <div class="contenedor-acordeon">
+          <h2>Preguntas frecuentes</h2>
+          <div class="acordeon">
+              <input type="radio" name="acordeon" id="btn-acordeon1" class="btn-acordeon">
+              <label for="btn-acordeon1">
+                  1. ¿Cómo encuentro recetas específicas en el sitio web?
+              </label>
+              <div class="contenido-acordeon">
+                  <p>Puede utilizar la barra de búsqueda en la página principal o navegar por las categorías de recetas para encontrar lo que está buscando. También puede utilizar filtros como tipo de comida, tiempo de preparación y dificultad.</p>
+              </div>
+          </div>
+          <div class="acordeon">
+              <input type="radio" name="acordeon" id="btn-acordeon2" class="btn-acordeon">
+              <label for="btn-acordeon2">
+                  2. ¿Puedo enviar mis propias recetas para que se publiquen?
+              </label>
+              <div class="contenido-acordeon">
+                  <p>Sí, nos encantaría ver tus recetas. Puedes enviar tus recetas a través de la página de "Enviar Receta". Nuestro equipo revisará tu receta y, si cumple con nuestros criterios, se publicará en el sitio.</p>
+              </div>
+          </div>
+          <div class="acordeon">
+              <input type="radio" name="acordeon" id="btn-acordeon3" class="btn-acordeon">
+              <label for="btn-acordeon3">
+                  3. ¿Cómo puedo imprimir una receta?
+              </label>
+              <div class="contenido-acordeon">
+                  <p>En cada página de receta, hay un botón de "Imprimir" que puedes utilizar para imprimir la receta directamente desde tu navegador.</p>
+              </div>
+          </div>
+          <div class="acordeon">
+              <input type="radio" name="acordeon" id="btn-acordeon4" class="btn-acordeon">
+              <label for="btn-acordeon4">
+                  4. ¿Las recetas tienen información nutricional?
+              </label>
+              <div class="contenido-acordeon">
+                  <p>Sí, muchas de nuestras recetas incluyen información nutricional como calorías, grasas, proteínas y carbohidratos. Esta información se encuentra al final de cada receta.</p>
+              </div>
+          </div>
+          <div class="acordeon">
+              <input type="radio" name="acordeon" id="btn-acordeon5" class="btn-acordeon">
+              <label for="btn-acordeon5">
+                  5. ¿Puedo ajustar las porciones de las recetas?
+              </label>
+              <div class="contenido-acordeon">
+                  <p>Sí, muchas de nuestras recetas tienen una función para ajustar el número de porciones. Puedes encontrar esta opción al lado de los ingredientes de cada receta.</p>
+              </div>
+          </div>
+          <div class="acordeon">
+              <input type="radio" name="acordeon" id="btn-acordeon6" class="btn-acordeon">
+              <label for="btn-acordeon6">
+                  6. ¿Cómo puedo guardar mis recetas favoritas?
+              </label>
+              <div class="contenido-acordeon">
+                  <p>Puedes crear una cuenta en nuestro sitio web para guardar tus recetas favoritas. Una vez registrado, simplemente haz clic en el botón "Guardar" en la receta que deseas guardar.</p>
+              </div>
+          </div>
+          <div class="acordeon">
+              <input type="radio" name="acordeon" id="btn-acordeon7" class="btn-acordeon">
+              <label for="btn-acordeon7">
+                  7. ¿Qué hago si tengo problemas con una receta?
+              </label>
+              <div class="contenido-acordeon">
+                  <p>Si encuentras algún problema con una receta, puedes dejarnos un comentario en la página de la receta o enviarnos un correo electrónico a soporte@recetassitio.com. Estaremos encantados de ayudarte.</p>
+              </div>
+          </div>
+          <div class="acordeon">
+              <input type="radio" name="acordeon" id="btn-acordeon8" class="btn-acordeon">
+              <label for="btn-acordeon8">
+                  8. ¿Cómo puedo recibir actualizaciones sobre nuevas recetas?
+              </label>
+              <div class="contenido-acordeon">
+                  <p>Puedes suscribirte a nuestro boletín para recibir actualizaciones regulares sobre nuevas recetas y artículos. También puedes seguirnos en nuestras redes sociales para estar al tanto de las últimas novedades.</p>
+              </div>
+          </div>
+          <div class="acordeon">
+              <input type="radio" name="acordeon" id="btn-acordeon9" class="btn-acordeon">
+              <label for="btn-acordeon9">
+                  9. ¿Hay videos disponibles para las recetas?
+              </label>
+              <div class="contenido-acordeon">
+                  <p>Sí, muchas de nuestras recetas vienen con videos tutoriales. Puedes encontrar estos videos en la sección de la receta o en nuestro canal de YouTube.</p>
+              </div>
+          </div>
+          <div class="acordeon">
+              <input type="radio" name="acordeon" id="btn-acordeon10" class="btn-acordeon">
+              <label for="btn-acordeon10">
+                  10. ¿Puedo compartir las recetas en redes sociales?
+              </label>
+              <div class="contenido-acordeon">
+                  <p>¡Por supuesto! Cada receta tiene botones de compartir para Facebook, Twitter, Pinterest y otras redes sociales. Simplemente haz clic en el botón de la red social que prefieras para compartir la receta.</p>
+              </div>
+          </div>
+      </div>
+      <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="assets/img/logo2.png" alt="Logo de SLee Dw">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Estudiante de la carrera de informatica, de primer semestre.</p>
+                <p>Estudiente de la materia de Programación Web INF-113</p>
+            </div>
+            <div class="box">
+                <h2>Redes Sociales</h2>
+                <div class="red-social">
+                    <a href="#">
+                        <i style='font-size:24px' class='fab'>&#xf09a;</i></a>
+                    <a href="#">
+                        <i style='font-size:24px' class='fab'>&#xf16d;</i></a>
+                    <a href="#">
+                        <i style='font-size:24px' class='fab'>&#xf099;</i></a>
+                    <a href="#">
+                        <i style="font-size:24px" class="fa">&#xf16a;</i></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2024 INF-113 Programacion Web I | Ichuta Sinka Yara Belen 14050612</small>
+        </div>
+    </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
